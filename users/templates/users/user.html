@@ -1,0 +1,18 @@
+{% extends "osnova/base.html" %}
+{% block title %}Страница Авторизации{% endblock %}
+{% block content %}
+<div class="user-section">
+    <div class="user-color">
+    <hr class="hr-user">
+        <h1>Страница Авторизации</h1>
+<form class="form-user" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Войти</button>
+    <a href="{% url 'pass-reset' %}">Восстановить пароль</a>
+</form>
+<hr class="hr-user">
+</div>
+<img src="https://avatars.mds.yandex.net/i?id=73e695da50100a05d2db2a417d0680a4_l-5333776-images-thumbs&n=13">
+</div>
+{% endblock %}

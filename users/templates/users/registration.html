@@ -1,0 +1,18 @@
+{% extends "osnova/base.html" %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+<div class="reg-section">
+    <div class="img-reg">
+    <img  class="reg-img" src="https://4082f5ddaf.cbaul-cdnwnd.com/bae0df8fd941d3f8109613d9a158ecee/200000195-d82d2d82d4/DESCRIPCION.png?ph=4082f5ddaf">
+    </div>
+    <hr class="hr-reg">
+    <h1>Страница регистрации</h1>
+<div class="form-reg">
+<form class="form-css" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn-register" type="submit">Зарегистрироваться</button>
+</form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "osnova/base.html" %}
+{% block title %}Кабинет пользователя{% endblock %}
+{% block content %}
+<div class="profile-section">
+<h1>Кабинет пользователя</h1>
+<div class="profile-float">
+    <img src="{{ user.profile.img.url }}">
+    <div class="profile-float2">
+<p class="profile-user">@{{ user.username }}</p>
+<p class="profile-email"><strong>Email адрес:</strong> {{ user.email }}</p>
+</div>
+</div> 
+<form class="form-profile"method="POST" enctype="multipart/form-data">
+     {%csrf_token%}
+     <h2>Изменить данные</h2>
+     {{ update_user_form.as_p }}
+     {{ profile_form.as_p }}
+     {{ sex_form.as_p }}
+     <div class="checkbox-fix">
+  {{ agreed_form.as_p }}
+</div>
+    <button type="submit">Обновить</button>
+</div>
+{% endblock %}
