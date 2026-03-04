@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """
 Django settings for Testproject project.
 
