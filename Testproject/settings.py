@@ -257,8 +257,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static',]
 LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'user'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'  # URL-префикс для доступа к медиафайлам
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # абсолютный путь к папке media
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 CSRF_TRUSTED_ORIGINS = [
