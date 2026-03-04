@@ -125,3 +125,10 @@ LOGIN_URL = 'user'
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-eee12.up.railway.app',
+]
+SECURE_PROXY_SSL_HEADER =('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
